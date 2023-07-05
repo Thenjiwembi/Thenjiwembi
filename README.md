@@ -106,3 +106,119 @@ public class SubjectApplicationGUI extends JFrame {
         });
     }
 }
+public class SubjectTableModel extends AbstractTableModel {
+    private List<Subject> subjects;
+    private final String[] columnNames = {"Subject Code", "Subject Name"};
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
+        fireTableDataChanged();
+    }
+
+    @Override
+    public int getRowCount() {
+        if (subjects != null) {
+            return subjects.size();
+        }
+        return 0;
+    }
+
+    @Override
+    public int getColumnCount() {
+        return columnNames.length;
+    }
+
+    @Override
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        Subject subject = subjects.get(rowIndex);
+        if (columnIndex == 0) {
+            return subject.getSubjectCode();
+        } else if (columnIndex == 1) {
+            return subject.getSubjectName();
+        }
+        return null;
+    }
+
+    @Override
+    public String getColumnName(int column) {
+        return columnNames[column];
+    }
+}
+public class SubjectTableModel extends AbstractTableModel {
+    private List<Subject> subjects;
+    private final String[] columnNames = {"Subject Code", "Subject Name"};
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
+        fireTableDataChanged();
+    }
+
+    @Override
+    public int getRowCount() {
+        if (subjects != null) {
+            return subjects.size();
+        }
+        return 0;
+    }
+
+    @Override
+    public int getColumnCount() {
+        return columnNames.length;
+    }
+
+    @Override
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        Subject subject = subjects.get(rowIndex);
+        if (columnIndex == 0) {
+            return subject.getSubjectCode();
+        } else if (columnIndex == 1) {
+            return subject.getSubjectName();
+        }
+        return null;
+    }
+
+    @Override
+    public String getColumnName(int column) {
+        return columnNames[column];
+    }
+}
+
+public class SubjectTableModel extends AbstractTableModel {
+    private List<Subject> subjects;
+    private final String[] columnNames = {"Subject Code", "Subject Name"};
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
+        fireTableDataChanged();
+    }
+
+    @Override
+    public int getRowCount() {
+        if (subjects != null) {
+            return subjects.size();
+        }
+        return 0;
+    }
+
+    @Override
+    public int getColumnCount() {
+        return columnNames.length;
+    }
+
+    @Override
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        Subject subject = subjects.get(rowIndex);
+        if (columnIndex == 0) {
+            return subject.getSubjectCode();
+        } else if (columnIndex == 1) {
+            return subject.getSubjectName();
+        }
+        return null;
+    }
+
+    @Override
+    public String getColumnName(int column) {
+        return columnNames[column];
+    }
+}
+
